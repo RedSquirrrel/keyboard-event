@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(3.jpg) no-repeat center center/cover;
+  line-height: 1.4;
+  overflow: hidden;
+}
+
+html {
+  /* 1rem  = 10px */
+  font-size: 62.5%;
+}
+
+.main {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  width: 90vw;
+  top: 5rem;
+  left: 15rem;
+  bottom: 5rem;
+  box-shadow: 5px 5px 10px 15px rgba(14, 14, 14, 0.5);
+  border-radius: 10px;
+}
+
+.main-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.vertical {
+  width: 200px;
+  text-align: center;
+  padding: 7rem;
+  background: rgba(236, 238, 240, 0.89);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  height: 100vh;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-shadow: 1px 5px 2px rgb(8, 8, 8);
+  font-family: 'Roboto', sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #7fffd4;
+  margin-right: 3rem;
+  text-align: center;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-shadow: 1px 5px 2px rgb(8, 8, 8);
+  font-family: 'Roboto', sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgb(190, 190, 190);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.show-code {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+span {
+  display: inline-flex;
+  justify-content: center;
+  align-self: center;
+  color: rgb(243, 239, 239);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 6rem;
+}
+
+.keySpan,
+.keyCodeSpan {
+  margin-left: 2rem;
+}
+
+#keyColor,
+#keyCodeColor {
+  color: #7fffd4;
+  display: none;
+  margin-right: 5rem;
+}
+
+#typing {
+  color: #fff;
+  font-size: 2rem;
+  z-index: 100;
+}
+
+.cursor {
+  width: 30px;
+  height: 30px;
+  border: 5px solid rgba(209, 211, 214, 0.8);
+  border-radius: 50%;
+  position: absolute;
+  cursor: none;
+  z-index: 10;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+p {
+  position: fixed;
+  bottom: 8rem;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-size: 1.3rem;
+  align-self: flex-end;
+  margin-bottom: 3rem;
+  margin-right: 4rem;
+  -webkit-box-reflect: below 2px linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+
+@media only screen and (max-width: 1100px) {
+  .main {
+    width: 80vw;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-left: 8rem;
+  }
+
+  span {
+    font-size: 4rem;
+  }
+
+  #keyColor,
+  #keyCodeColor {
+    margin-left: 10rem;
+  }
+
+  .cursor {
+    display: none;
+  }
+}
+@media only screen and (max-width: 950px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  span {
+    font-size: 2.2rem;
+  }
+
+  #keyColor,
+  #keyCodeColor {
+    margin-left: 10rem;
+  }
+
+  .cursor {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  body {
+    background: whitesmoke;
+  }
+  .main {
+    background: url(3.jpg) no-repeat center center/cover;
+    position: unset;
+    width: 85vw;
+    height: 90vh;
+    margin: 2rem auto;
+    top: 0;
+    left: 0;
+    bottom: 1rem;
+  }
+
+  .main-container {
+    height: 100%;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .vertical,
+  h1 {
+    display: none;
+  }
+
+  h2 {
+    text-shadow: none;
+    font-size: 2rem;
+  }
+
+  .show-code {
+    height: 8rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  span {
+    display: unset;
+    font-size: 2rem;
+  }
+
+  .keySpan,
+  .keyCodeSpan {
+    margin-left: 1rem;
+  }
+
+  #keyColor,
+  #keyCodeColor {
+    margin-right: unset;
+  }
+
+  .cursor {
+    display: none;
+  }
+
+  footer {
+    justify-content: center;
+  }
+
+  p {
+    margin-bottom: 3rem;
+    margin-left: 15rem;
+  }
+}
